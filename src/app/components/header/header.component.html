@@ -1,0 +1,32 @@
+<header class="bg-gray-50 z-50">
+    <div class="h-14 lg:h-20 flex items-center max-w-6xl mx-auto px-3 gap-2 justify-between">
+
+        <!-- Logo -->
+        <nav id="site-header--logo-links">
+            <a routerLink="">
+                <img src="/assets/logo/logo-landscape-light-theme.svg" class="h-9 lg:h-11 pointer-events-none">
+            </a>
+        </nav>
+
+        <!-- Landing Links -->
+        <nav id="site-header--landing-links" class="hidden lg:flex items-center justify-center gap-2">
+            <a href="#" class="btn-secondary">Platforms</a>
+            <a routerLink="pricing" class="btn-secondary">Pricing</a>
+            <a routerLink="contact" class="btn-secondary">Contact</a>
+            <a href="#" class="btn-secondary">Blog</a>
+        </nav>
+
+        <!-- Auth Links -->
+        <nav id="site-header--auth-links" class="hidden lg:flex items-center justify-center gap-2">
+            <a href="#" class="btn-secondary">Sign in</a>
+            <a href="#" class="btn-primary">Get started</a>
+        </nav>
+
+        <!-- Mobile Menu Button -->
+        <button class="lg:hidden p-2 flex items-center justify-center">
+            <ng-icon name="mat-menu" size="24px"></ng-icon>
+        </button>
+
+
+    </div>
+</header>

@@ -1,0 +1,170 @@
+<!-- Hero Section -->
+<section class="h-auto sm:h-screen pt-12 sm:pt-0 -mt-12 lg:-mt-20 mb-6">
+
+    <div class="bg-gray-50 h-full flex items-center">
+        <div class="max-w-6xl mx-auto pt-16 pb-24 w-full">
+            <div class="px-8 pb-24 lg:px-4 xl:px-0">
+
+                <div class="mb-8 hidden sm:block">
+                    <a target="_blank"
+                        class="roudned-full inline-flex space-x-4 rounded-full border border-blue-100 bg-gradient-to-br from-blue-50 to-indigo-100 p-1 pr-2"
+                        href="#">
+                        <span
+                            class="rounded-full bg-blue-500 px-2.5 py-1 text-xs font-semibold uppercase tracking-wide text-white">
+                            <span>New Release</span>
+                        </span>
+                        <span class="inline-flex items-center space-x-1 text-sm font-medium text-blue-600">
+                            <span>Introducing Rural Health Care</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
+                                aria-hidden="true" class="h-5 w-5">
+                                <path fill-rule="evenodd"
+                                    d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+                                    clip-rule="evenodd"></path>
+                            </svg>
+                        </span>
+                    </a>
+                </div>
+
+                <h1 class="max-w-4xl font-display text-3xl font-medium tracking-tight text-slate-700 sm:text-7xl">
+                    National Broadband Intelligence & <span class="whitespace-nowrap">E-rate</span> Analytics
+                </h1>
+
+                <p class=" mt-4 max-w-2xl text-base sm:text-xl tracking-tightish text-slate-700">Thousands of schools
+                    and
+                    libraries
+                    are advancing their broadband access and utilizing Universal Service Administrative
+                    Company's Schools and Libraries E-rate Program to help fund these initiatives.</p>
+
+                <div class="flex gap-3 items-center mt-8">
+                    <a href="#" class="btn-dark btn-large">Get started</a>
+                    <a href="#" class="btn-secondary bth-large">Schedule a demo</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+<!-- Stats section-->
+<section class="sm:m-8 xl:m-10 relative mb-12 md:mb-0">
+    <div class="max-w-6xl mx-auto px-4 md:px-8 grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8">
+        <div class="rounded-lg md:rounded-3xl bg-gray-100 p-4 md:p-8">
+            <ng-icon name="mat-backpack-outline" size="60px" class="text-gray-700"></ng-icon>
+            <!--<bh-icon svgIcon="cash" style="height:60px;width:60px;font-size:60px" class="text-gray-700"></bh-icon>-->
+            <div class="text-2xl text-gray-700 font-medium">$23.4 B+</div>
+            <div class="text-sm text-gray-500">of E-rate funding tracked</div>
+        </div>
+        <div class="rounded-lg md:rounded-3xl bg-gray-100 p-4 md:p-8">
+            <ng-icon name="mat-backpack-outline" size="60px" class="text-gray-700"></ng-icon>
+            <div class="text-2xl text-gray-700 font-medium">220 K+</div>
+            <div class="text-sm text-gray-500">schools monitored</div>
+        </div>
+        <div class="rounded-lg md:rounded-3xl bg-gray-100 p-4 md:p-8">
+            <ng-icon name="mat-backpack-outline" size="60px" class="text-gray-700"></ng-icon>
+            <!--<bh-icon svgIcon="tray" style="height:60px;width:60px;font-size:60px" class="text-gray-700"></bh-icon>-->
+            <div class="text-2xl text-gray-700 font-medium">4 TB+</div>
+            <div class="text-sm text-gray-500">of USAC-suggested compliant documents retained</div>
+        </div>
+        <div class="rounded-lg md:rounded-3xl bg-gray-100 p-4 md:p-8">
+            <ng-icon name="mat-place-outline" size="60px" class="text-gray-700"></ng-icon>
+            <div class="text-2xl text-gray-700 font-medium">50 K+ Miles</div>
+            <div class="text-sm text-gray-500">of fiber routes deployed</div>
+        </div>
+    </div>
+</section>
+
+<!-- E-rate section -->
+<section class="sm:m-8 xl:m-10 mb-12 md:mb-0">
+    <div class="max-w-6xl mx-auto px-4 md:px-8">
+        <div
+            class="rounded-lg sm:rounded-3xl bg-slate-100 flex flex-col-reverse md:grid md:grid-cols-2 md:gap-4 overflow-hidden">
+            <div class="py-0 pr-20 md:pr-0 -md:mx-8 md:mt-16">
+                <img src="/assets/images/erate-dashboard-safari-dark.png" class="pointer-events-none"
+                    style="border-top-right-radius:7px; box-shadow: 8px -8px 15px 0px rgb(0 0 0 / 10%), 4px -4px 11px 0px rgb(0 0 0 / 10%)">
+            </div>
+            <div class="flex flex-col justify-center p-8 md:py-0 md:px-16 gap-4">
+                <div class="text-xl uppercase text-slate-600">E-rate</div>
+                <div class="text-4xl text-slate-700 font-semibold">Keep track of all your E-rate data better than you
+                    ever have.</div>
+                <div class="text-lg text-slate-500">Whether you are a small private school or a large internet provider,
+                    BroadbandHub gathers all of your E-rate needs into one dashboard.</div>
+                <div>
+                    <a [routerLink]="['/erate']" bh-text-button color="primary" arrow>Learn more about our E-rate
+                        platform</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Rural Health Care section -->
+<section class="sm:m-8 xl:m-10 mb-12 md:mb-0">
+    <div class="max-w-6xl mx-auto px-4 md:px-8">
+        <div
+            class="rounded-lg sm:rounded-3xl bg-blue-500 flex flex-col md:grid md:grid-cols-2 md:gap-4 overflow-hidden">
+            <div class="flex flex-col justify-center p-8 md:py-0 md:px-16 gap-4">
+                <div class="flex items-center gap-3">
+                    <div class="text-xl uppercase text-slate-100">Rural Health Care</div>
+                    <div class="bg-white/[.15] text-white px-2 rounded-full text-sm">BETA</div>
+                </div>
+                <div class="text-4xl text-white font-semibold">The first comprehensive Rural Health Care web platform
+                </div>
+                <div class="text-lg text-slate-200">Our newest platform is now in beta mode. Join us as we pioneer the
+                    best tool for tracking and analyzing RHC data.</div>
+                <div>
+                    <a [routerLink]="['/rural-health-care']" bh-text-button class="!text-white" arrow>Learn more about
+                        our RHC platform</a>
+                </div>
+            </div>
+            <div class="py-0 pl-20 md:pl-0 -md:mx-8 md:mt-16">
+                <img src="/assets/images/rhc-dashboard-safari-dark.png" class="pointer-events-none">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Mapping section -->
+<section class="sm:m-8 xl:m-10 mb-12 md:mb-0">
+    <div class="max-w-6xl mx-auto px-4 md:px-8">
+        <div class="rounded-lg sm:rounded-3xl bg-slate-100"
+            style="background-image: linear-gradient(to top,rgba(255,255,255,.3),rgba(255,255,255,.7)),url('/assets/images/map-gray-large.png')">
+
+            <div
+                class="flex flex-col justify-center items-start md:items-center px-4 md:px-16 gap-4 py-8 md:py-28 max-w-2xl mx-auto">
+                <div class="text-xl uppercase text-slate-600">Mapping and Target Automation</div>
+                <div class="text-4xl text-slate-700 font-semibold md:text-center">The most advanced E-rate and Rural
+                    Health
+                    Care map on
+                    the internet.</div>
+                <div class="text-lg text-slate-500 md:text-center">Explore broadband data in a new medium. Our powerful,
+                    in-web mapping software allows you to compare multiple geographical datasets to better understand
+                    broadband data.</div>
+                <div>
+                    <a [routerLink]="['/mapping']" bh-text-button color="primary" arrow>Learn more about Mapping<span
+                            class="hidden md:inline"> and Target Automation</span></a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- Document Locker section -->
+<section class="sm:m-8 xl:m-10 mb-12 md:mb-0">
+    <div class="max-w-6xl mx-auto px-4 md:px-8">
+        <div class="rounded-lg sm:rounded-3xl bg-blue-500">
+            <div
+                class="flex flex-col justify-center items-start md:items-center px-4 md:px-16 gap-4 py-8 md:py-28 max-w-2xl mx-auto">
+                <div class="text-xl uppercase text-white/80">Document Locker</div>
+                <div class="text-4xl text-white font-semibold md:text-center">Automated document retention for your
+                    compliance requirements.</div>
+                <div class="text-lg text-white/70 md:text-center">Be better prepared for audits with secure, reliable,
+                    USAC-suggested compliant document cloud storage.</div>
+                <div class="pt-4">
+                    <a [routerLink]="['/document-locker']" bh-text-button class="!text-white" arrow>Learn more about
+                        Document Locker</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
