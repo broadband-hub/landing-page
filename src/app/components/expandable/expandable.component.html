@@ -1,0 +1,7 @@
+<div #expandable_header class="p-3 md:p-5 flex items-center justify-between transition-colors">
+    <div class="text-xl font-medium"  [ngClass]="expanded ? 'text-blue-500' : 'text-slate-700'">{{ title }}</div>
+    <ng-icon name="mat-add-circle-outline" size="24px" class="text-slate-700 transition-all duration-300" [class.rotate-45]="expanded"></ng-icon>
+</div>
+<div #expandable_content class="px-3 pb-3 md:px-5 md:pb-5 text-lg text-slate-700">
+    <ng-content></ng-content>
+</div>

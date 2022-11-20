@@ -1,0 +1,11 @@
+.landing-footer-list {
+    @apply w-full text-base;
+
+    li.landing-footer-list--header {
+        @apply text-blue-500 uppercase font-medium mb-5;
+    }
+
+    li:not(.landing-footer-list--header) {
+        @apply text-gray-300 my-5;
+    }
+}

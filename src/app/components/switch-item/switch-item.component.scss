@@ -1,0 +1,9 @@
+.switch-item {
+    @apply bg-transparent flex px-2 items-center justify-center transition-all whitespace-nowrap;
+    height:34px;
+    border-radius:17px;
+
+    &.switch-item-active {
+        @apply bg-white shadow;
+    }
+}

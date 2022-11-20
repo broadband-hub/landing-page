@@ -1,4 +1,4 @@
-<header class="bg-gray-50 z-50">
+<header #header class="bg-gray-50 z-50">
     <div class="h-14 lg:h-20 flex items-center max-w-6xl mx-auto px-3 gap-2 justify-between">
 
         <!-- Logo -->
@@ -10,7 +10,44 @@
 
         <!-- Landing Links -->
         <nav id="site-header--landing-links" class="hidden lg:flex items-center justify-center gap-2">
-            <a href="#" class="btn-secondary">Platforms</a>
+            <div class="relative" (mouseover)="platforms_menu.show()" (mouseout)="platforms_menu.hide()">
+                <button class="btn-secondary" (click)="platforms_menu.toggle()">Platforms</button>
+                <app-dropdown #platforms_menu>
+                    <div class="w-96 flex flex-col gap-1">
+                        <a class="secondary-btn" routerLink="platforms/erate" (click)="platforms_menu.hide()">
+                            <span>E-rate</span>
+                            <ng-icon name="mat-arrow-forward"></ng-icon>
+                        </a>
+                        <a class="secondary-btn" routerLink="platforms/emergency-connectivity-fund" (click)="platforms_menu.hide()">
+                            <span>Emergency Connectivity Fund</span>
+                            <ng-icon name="mat-arrow-forward"></ng-icon>
+                        </a>
+                        <a class="secondary-btn" routerLink="platforms/rural-health-care" (click)="platforms_menu.hide()">
+                            <span>Rural Health Care</span>
+                            <ng-icon name="mat-arrow-forward"></ng-icon>
+                        </a>
+                    </div>
+                </app-dropdown>
+            </div>
+            <div class="relative" (mouseover)="features_menu.show()" (mouseout)="features_menu.hide()">
+                <button class="btn-secondary" (click)="features_menu.toggle()">Features</button>
+                <app-dropdown #features_menu>
+                    <div class="w-96 flex flex-col gap-1">
+                        <a routerLink="features/mapping" class="secondary-btn" (click)="features_menu.hide()">
+                            <span>Mapping</span>
+                            <ng-icon name="mat-arrow-forward"></ng-icon>
+                        </a>
+                        <a routerLink="features/calendar" class="secondary-btn" (click)="features_menu.hide()">
+                            <span>Calendar</span>
+                            <ng-icon name="mat-arrow-forward"></ng-icon>
+                        </a>
+                        <a routerLink="features/contacts" class="secondary-btn" (click)="features_menu.hide()">
+                            <span>Contacts</span>
+                            <ng-icon name="mat-arrow-forward"></ng-icon>
+                        </a>
+                    </div>
+                </app-dropdown>
+            </div>
             <a routerLink="pricing" class="btn-secondary">Pricing</a>
             <a routerLink="contact" class="btn-secondary">Contact</a>
             <a href="#" class="btn-secondary">Blog</a>

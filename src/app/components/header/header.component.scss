@@ -1,0 +1,13 @@
+.secondary-btn {
+    @apply flex w-full items-center hover:bg-gray-100 focus-visible:bg-gray-100  rounded-lg p-3 outline-none justify-between;
+
+    ng-icon {
+        @apply opacity-0 -translate-x-1 transition-all;
+    }
+
+    &:hover, &:focus-visible {
+        ng-icon {
+            @apply opacity-100 translate-x-0;
+        }
+    }
+}

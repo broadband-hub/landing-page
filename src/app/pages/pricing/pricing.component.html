@@ -1,1 +1,771 @@
-<p>pricing works!</p>
+<!-- Hero section -->
+<section class="sm:m-8 xl:m-10 relative overflow-hidden sm:rounded-3xl mb-4 md:mb-0">
+    <div class="bg-blue-500 sm:rounded-3xl absolute top-0 w-full h-full" style="z-index:-1"></div>
+    <div class="max-w-screen-xl mx-auto px-4 md:px-8 relative">
+        <div class="w-full md:w-1/2 py-20 md:pt-32 md:pb-24 text-center md:mx-auto">
+            <h1 class="text-5xl md:text-6xl text-white font-medium md:font-bold mb-8">Pricing that fits your
+                organization</h1>
+            <h4 class="text-2xl text-white/80 mb-8 text-center">Unlimited seats. 30-day free trial. No card required.
+            </h4>
+            <a [routerLink]="['/contact']" class="btn-white btn-large">
+                <span>Schedule a free demo</span>
+            </a>
+        </div>
+    </div>
+</section>
+
+
+<!-- Organization Type Switch -->
+<section class="flex justify-center py-8 md:py-12">
+    <app-switch [(value)]="organization_type" (valueChange)="onOrgTypeChange($event)">
+        <button app-switch-item value="applicant">Applicant</button>
+        <button app-switch-item value="consultant">Consultant</button>
+        <button app-switch-item value="service-provider">Service Provider</button>
+    </app-switch>
+</section>
+
+<ng-container [ngSwitch]="organization_type">
+
+    <!-- Applicant Pricing -->
+    <ng-container *ngSwitchCase="'applicant'">
+        <section class="sm:m-8 xl:m-10 sm:rounded-3xl mb-4 md:mb-12">
+            <div class="max-w-screen-xl mx-auto px-4 md:px-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 ">
+        
+                <!-- Applicant Free -->
+                <div class="pricing-card">
+                    <div class="text-sm text-slate-500">Applicant</div>
+                    <div class="text-3xl font-semibold text-slate-700 mb-2">Free</div>
+                    <div class="text-sm text-slate-500 mb-4">Base-level resources for school administrators</div>
+                    <div class="flex items-end">
+                        <div class="text-4xl font-semibold text-slate-700">$0</div>
+                        <div class="text-xl font-semibold text-slate-700">/mo</div>
+                    </div>
+                    <div class="pt-6 pb-10">
+                        <a href="#" class="btn-dark btn-large !w-full">Get started today</a>
+                    </div>
+        
+                    <!-- Features -->
+                    <div class="flex flex-col gap-1 mb-4">
+                        <div class="text-sm text-slate-700 font-semibold">Features</div>
+                        <div class="flex items-start gap-1">
+                            <ng-icon name="mat-check" class="mt-0.5"></ng-icon>
+                            <div class="text-sm text-slate-700">View your school's child entities</div>
+                        </div>
+                        <div class="flex items-start gap-1">
+                            <ng-icon name="mat-check" class="mt-0.5"></ng-icon>
+                            <div class="text-sm text-slate-700">View your Form 470s for the current funding year</div>
+                        </div>
+                        <div class="flex items-start gap-1">
+                            <ng-icon name="mat-check" class="mt-0.5"></ng-icon>
+                            <div class="text-sm text-slate-700">View your Form 471s for the current funding year</div>
+                        </div>
+                        <div class="flex items-start gap-1">
+                            <ng-icon name="mat-check" class="mt-0.5"></ng-icon>
+                            <div class="text-sm text-slate-700">View your E-rate disbursements for the current funding year
+                            </div>
+                        </div>
+                    </div>
+        
+                    <!-- Seats -->
+                    <div class="flex flex-col gap-1 mb-4">
+                        <div class="text-sm text-slate-700 font-semibold">Seats</div>
+                        <div class="flex items-start gap-1">
+                            <ng-icon name="mat-check" class="mt-0.5"></ng-icon>
+                            <div class="text-sm text-slate-700">Unlimited seats within your domain</div>
+                        </div>
+                    </div>
+        
+                    <!-- Support -->
+                    <div class="flex flex-col gap-1">
+                        <div class="text-sm text-slate-700 font-semibold">Support</div>
+                        <div class="flex items-start gap-1">
+                            <ng-icon name="mat-check" class="mt-0.5"></ng-icon>
+                            <div class="text-sm text-slate-700">Email support</div>
+                        </div>
+                        <div class="flex items-start gap-1">
+                            <ng-icon name="mat-check" class="mt-0.5"></ng-icon>
+                            <div class="text-sm text-slate-700">Phone support</div>
+                        </div>
+                    </div>
+        
+                </div>
+        
+                <!-- Applicant Basic -->
+                <div class="pricing-card">
+                    <div class="text-sm text-slate-500">Applicant</div>
+                    <div class="text-3xl font-semibold text-slate-700 mb-2">Basic</div>
+                    <div class="text-sm text-slate-500 mb-4">Unfiltered, unlimited access to all E-rate data nationally</div>
+                    <div class="flex items-end">
+                        <div class="text-4xl font-semibold text-slate-700">$100</div>
+                        <div class="text-xl font-semibold text-slate-700">/mo</div>
+                    </div>
+                    <div class="pt-6 pb-10">
+                        <a href="#" class="btn-primary btn-large !w-full">Start your trial</a>
+                    </div>
+        
+                    <!-- Features -->
+                    <div class="flex flex-col gap-1 mb-4">
+                        <div class="text-sm text-slate-700 font-semibold">Features</div>
+                        <div class="flex items-start gap-1">
+                            <ng-icon name="mat-check" class="mt-0.5"></ng-icon>
+                            <div class="text-sm text-slate-700">View your school's child entities</div>
+                        </div>
+                        <div class="flex items-start gap-1">
+                            <ng-icon name="mat-check" class="mt-0.5"></ng-icon>
+                            <div class="text-sm text-slate-700">View your Form 470s for all funding years</div>
+                        </div>
+                        <div class="flex items-start gap-1">
+                            <ng-icon name="mat-check" class="mt-0.5"></ng-icon>
+                            <div class="text-sm text-slate-700">View your Form 471s for all funding years</div>
+                        </div>
+                        <div class="flex items-start gap-1">
+                            <ng-icon name="mat-check" class="mt-0.5"></ng-icon>
+                            <div class="text-sm text-slate-700">View your E-rate disbursements for all funding years
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-1">
+                            <ng-icon name="mat-check" class="mt-0.5"></ng-icon>
+                            <div class="text-sm text-slate-700">Full suite of notifications
+                            </div>
+                        </div>
+                    </div>
+        
+                    <!-- Seats -->
+                    <div class="flex flex-col gap-1 mb-4">
+                        <div class="text-sm text-slate-700 font-semibold">Seats</div>
+                        <div class="flex items-start gap-1">
+                            <ng-icon name="mat-check" class="mt-0.5"></ng-icon>
+                            <div class="text-sm text-slate-700">Unlimited seats within your domain</div>
+                        </div>
+                    </div>
+        
+                    <!-- Support -->
+                    <div class="flex flex-col gap-1">
+                        <div class="text-sm text-slate-700 font-semibold">Support</div>
+                        <div class="flex items-start gap-1">
+                            <ng-icon name="mat-check" class="mt-0.5"></ng-icon>
+                            <div class="text-sm text-slate-700">Email support</div>
+                        </div>
+                        <div class="flex items-start gap-1">
+                            <ng-icon name="mat-check" class="mt-0.5"></ng-icon>
+                            <div class="text-sm text-slate-700">Phone support</div>
+                        </div>
+                    </div>
+                </div>
+        
+                <!-- Applicant Advanced -->
+                <div class="pricing-card">
+                    <div class="text-sm text-slate-500">Applicant</div>
+                    <div class="text-3xl font-semibold text-slate-700 mb-2">Advanced</div>
+                    <div class="text-sm text-slate-500 mb-4">Unfiltered, unlimited access to all E-rate data nationally plus
+                        additional add-ons</div>
+                    <div class="flex items-end">
+                        <div class="text-4xl font-semibold text-slate-700">$200</div>
+                        <div class="text-xl font-semibold text-slate-700">/mo</div>
+                    </div>
+                    <div class="pt-6 pb-10">
+                        <a href="#" class="btn-primary btn-large !w-full">Start your trial</a>
+                    </div>
+        
+                    <!-- Features -->
+                    <div class="flex flex-col gap-1 mb-4">
+                        <div class="text-sm text-slate-700 font-semibold">Features</div>
+                        <div class="flex items-start gap-1">
+                            <ng-icon name="mat-check" class="mt-0.5"></ng-icon>
+                            <div class="text-sm text-slate-700">View your school's child entities</div>
+                        </div>
+                        <div class="flex items-start gap-1">
+                            <ng-icon name="mat-check" class="mt-0.5"></ng-icon>
+                            <div class="text-sm text-slate-700">View your Form 470s for all funding years</div>
+                        </div>
+                        <div class="flex items-start gap-1">
+                            <ng-icon name="mat-check" class="mt-0.5"></ng-icon>
+                            <div class="text-sm text-slate-700">View your Form 471s for all funding years</div>
+                        </div>
+                        <div class="flex items-start gap-1">
+                            <ng-icon name="mat-check" class="mt-0.5"></ng-icon>
+                            <div class="text-sm text-slate-700">View your E-rate disbursements for all funding years
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-1">
+                            <ng-icon name="mat-check" class="mt-0.5"></ng-icon>
+                            <div class="text-sm text-slate-700">Full suite of notifications
+                            </div>
+                        </div>
+                    </div>
+        
+                    <!-- Seats -->
+                    <div class="flex flex-col gap-1 mb-4">
+                        <div class="text-sm text-slate-700 font-semibold">Seats</div>
+                        <div class="flex items-start gap-1">
+                            <ng-icon name="mat-check" class="mt-0.5"></ng-icon>
+                            <div class="text-sm text-slate-700">Unlimited seats within your domain</div>
+                        </div>
+                    </div>
+        
+                    <!-- Support -->
+                    <div class="flex flex-col gap-1 mb-4">
+                        <div class="text-sm text-slate-700 font-semibold">Support</div>
+                        <div class="flex items-start gap-1">
+                            <ng-icon name="mat-check" class="mt-0.5"></ng-icon>
+                            <div class="text-sm text-slate-700">Email support</div>
+                        </div>
+                        <div class="flex items-start gap-1">
+                            <ng-icon name="mat-check" class="mt-0.5"></ng-icon>
+                            <div class="text-sm text-slate-700">Phone support</div>
+                        </div>
+                    </div>
+        
+                    <!-- Add-ons -->
+                    <div class="flex flex-col gap-1">
+                        <div class="text-sm text-slate-700 font-semibold">Add-ons</div>
+                        <div class="flex items-start gap-1">
+                            <ng-icon name="mat-check" class="mt-0.5"></ng-icon>
+                            <div class="text-sm text-slate-700">Document Locker</div>
+                        </div>
+                    </div>
+                </div>
+        
+                <!-- Applicant Professional -->
+                <div class="pricing-card">
+                    <div class="text-sm text-slate-500">Applicant</div>
+                    <div class="text-3xl font-semibold text-slate-700 mb-2">Professional</div>
+                    <div class="text-sm text-slate-500 mb-4">Unfiltered, unlimited access to all E-rate data nationally plus
+                        additional add-ons</div>
+                    <div class="flex items-end">
+                        <div class="text-4xl font-semibold text-slate-700">$300</div>
+                        <div class="text-xl font-semibold text-slate-700">/mo</div>
+                    </div>
+                    <div class="pt-6 pb-10">
+                        <a href="#" class="btn-primary btn-large !w-full">Start your trial</a>
+                    </div>
+        
+                    <!-- Features -->
+                    <div class="flex flex-col gap-1 mb-4">
+                        <div class="text-sm text-slate-700 font-semibold">Features</div>
+                        <div class="flex items-start gap-1">
+                            <ng-icon name="mat-check" class="mt-0.5"></ng-icon>
+                            <div class="text-sm text-slate-700">View your school's child entities</div>
+                        </div>
+                        <div class="flex items-start gap-1">
+                            <ng-icon name="mat-check" class="mt-0.5"></ng-icon>
+                            <div class="text-sm text-slate-700">View your Form 470s for all funding years</div>
+                        </div>
+                        <div class="flex items-start gap-1">
+                            <ng-icon name="mat-check" class="mt-0.5"></ng-icon>
+                            <div class="text-sm text-slate-700">View your Form 471s for all funding years</div>
+                        </div>
+                        <div class="flex items-start gap-1">
+                            <ng-icon name="mat-check" class="mt-0.5"></ng-icon>
+                            <div class="text-sm text-slate-700">View your E-rate disbursements for all funding years
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-1">
+                            <ng-icon name="mat-check" class="mt-0.5"></ng-icon>
+                            <div class="text-sm text-slate-700">Full suite of notifications
+                            </div>
+                        </div>
+                    </div>
+        
+                    <!-- Seats -->
+                    <div class="flex flex-col gap-1 mb-4">
+                        <div class="text-sm text-slate-700 font-semibold">Seats</div>
+                        <div class="flex items-start gap-1">
+                            <ng-icon name="mat-check" class="mt-0.5"></ng-icon>
+                            <div class="text-sm text-slate-700">Unlimited seats within your domain</div>
+                        </div>
+                    </div>
+        
+                    <!-- Support -->
+                    <div class="flex flex-col gap-1 mb-4">
+                        <div class="text-sm text-slate-700 font-semibold">Support</div>
+                        <div class="flex items-start gap-1">
+                            <ng-icon name="mat-check" class="mt-0.5"></ng-icon>
+                            <div class="text-sm text-slate-700">Email support</div>
+                        </div>
+                        <div class="flex items-start gap-1">
+                            <ng-icon name="mat-check" class="mt-0.5"></ng-icon>
+                            <div class="text-sm text-slate-700">Phone support</div>
+                        </div>
+                    </div>
+        
+                    <!-- Add-ons -->
+                    <div class="flex flex-col gap-1">
+                        <div class="text-sm text-slate-700 font-semibold">Add-ons</div>
+                        <div class="flex items-start gap-1">
+                            <ng-icon name="mat-check" class="mt-0.5"></ng-icon>
+                            <div class="text-sm text-slate-700">Document Locker</div>
+                        </div>
+                        <div class="flex items-start gap-1">
+                            <ng-icon name="mat-check" class="mt-0.5"></ng-icon>
+                            <div class="text-sm text-slate-700">Mapping and Target Automation</div>
+                        </div>
+                        <div class="flex items-start gap-1">
+                            <ng-icon name="mat-check" class="mt-0.5"></ng-icon>
+                            <div class="text-sm text-slate-700">Geolocation Insights</div>
+                        </div>
+                    </div>
+                </div>
+        
+        
+            </div>
+        </section>
+    </ng-container>
+
+    <!-- Consultant Pricing -->
+    <ng-container *ngSwitchCase="'consultant'">
+        <section class="sm:m-8 xl:m-10 sm:rounded-3xl mb-4 md:mb-12">
+            <div class="max-w-screen-xl mx-auto px-4 md:px-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 ">
+        
+        
+                <!-- Consultant Basic -->
+                <div class="pricing-card">
+                    <div class="text-sm text-slate-500">Consultant</div>
+                    <div class="text-3xl font-semibold text-slate-700 mb-2">Basic</div>
+                    <div class="text-sm text-slate-500 mb-4">Unfiltered, unlimited access to all E-rate data nationally</div>
+                    <div class="flex items-end">
+                        <div class="text-4xl font-semibold text-slate-700">$100</div>
+                        <div class="text-xl font-semibold text-slate-700">/mo</div>
+                    </div>
+                    <div class="pt-6 pb-10">
+                        <a href="#" class="btn-primary btn-large !w-full">Start your trial</a>
+                    </div>
+        
+                    <!-- Features -->
+                    <div class="flex flex-col gap-1 mb-4">
+                        <div class="text-sm text-slate-700 font-semibold">Features</div>
+                        <div class="flex items-start gap-1">
+                            <ng-icon name="mat-check" class="mt-0.5"></ng-icon>
+                            <div class="text-sm text-slate-700">View your school's child entities</div>
+                        </div>
+                        <div class="flex items-start gap-1">
+                            <ng-icon name="mat-check" class="mt-0.5"></ng-icon>
+                            <div class="text-sm text-slate-700">View your Form 470s for all funding years</div>
+                        </div>
+                        <div class="flex items-start gap-1">
+                            <ng-icon name="mat-check" class="mt-0.5"></ng-icon>
+                            <div class="text-sm text-slate-700">View your Form 471s for all funding years</div>
+                        </div>
+                        <div class="flex items-start gap-1">
+                            <ng-icon name="mat-check" class="mt-0.5"></ng-icon>
+                            <div class="text-sm text-slate-700">View your E-rate disbursements for all funding years
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-1">
+                            <ng-icon name="mat-check" class="mt-0.5"></ng-icon>
+                            <div class="text-sm text-slate-700">Full suite of notifications
+                            </div>
+                        </div>
+                    </div>
+        
+                    <!-- Seats -->
+                    <div class="flex flex-col gap-1 mb-4">
+                        <div class="text-sm text-slate-700 font-semibold">Seats</div>
+                        <div class="flex items-start gap-1">
+                            <ng-icon name="mat-check" class="mt-0.5"></ng-icon>
+                            <div class="text-sm text-slate-700">Unlimited seats within your domain</div>
+                        </div>
+                    </div>
+        
+                    <!-- Support -->
+                    <div class="flex flex-col gap-1">
+                        <div class="text-sm text-slate-700 font-semibold">Support</div>
+                        <div class="flex items-start gap-1">
+                            <ng-icon name="mat-check" class="mt-0.5"></ng-icon>
+                            <div class="text-sm text-slate-700">Email support</div>
+                        </div>
+                        <div class="flex items-start gap-1">
+                            <ng-icon name="mat-check" class="mt-0.5"></ng-icon>
+                            <div class="text-sm text-slate-700">Phone support</div>
+                        </div>
+                    </div>
+                </div>
+        
+                <!-- Consultant Advanced -->
+                <div class="pricing-card">
+                    <div class="text-sm text-slate-500">Consultant</div>
+                    <div class="text-3xl font-semibold text-slate-700 mb-2">Advanced</div>
+                    <div class="text-sm text-slate-500 mb-4">Unfiltered, unlimited access to all E-rate data nationally plus
+                        additional add-ons</div>
+                    <div class="flex items-end">
+                        <div class="text-4xl font-semibold text-slate-700">$200</div>
+                        <div class="text-xl font-semibold text-slate-700">/mo</div>
+                    </div>
+                    <div class="pt-6 pb-10">
+                        <a href="#" class="btn-primary btn-large !w-full">Start your trial</a>
+                    </div>
+        
+                    <!-- Features -->
+                    <div class="flex flex-col gap-1 mb-4">
+                        <div class="text-sm text-slate-700 font-semibold">Features</div>
+                        <div class="flex items-start gap-1">
+                            <ng-icon name="mat-check" class="mt-0.5"></ng-icon>
+                            <div class="text-sm text-slate-700">View your school's child entities</div>
+                        </div>
+                        <div class="flex items-start gap-1">
+                            <ng-icon name="mat-check" class="mt-0.5"></ng-icon>
+                            <div class="text-sm text-slate-700">View your Form 470s for all funding years</div>
+                        </div>
+                        <div class="flex items-start gap-1">
+                            <ng-icon name="mat-check" class="mt-0.5"></ng-icon>
+                            <div class="text-sm text-slate-700">View your Form 471s for all funding years</div>
+                        </div>
+                        <div class="flex items-start gap-1">
+                            <ng-icon name="mat-check" class="mt-0.5"></ng-icon>
+                            <div class="text-sm text-slate-700">View your E-rate disbursements for all funding years
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-1">
+                            <ng-icon name="mat-check" class="mt-0.5"></ng-icon>
+                            <div class="text-sm text-slate-700">Full suite of notifications
+                            </div>
+                        </div>
+                    </div>
+        
+                    <!-- Seats -->
+                    <div class="flex flex-col gap-1 mb-4">
+                        <div class="text-sm text-slate-700 font-semibold">Seats</div>
+                        <div class="flex items-start gap-1">
+                            <ng-icon name="mat-check" class="mt-0.5"></ng-icon>
+                            <div class="text-sm text-slate-700">Unlimited seats within your domain</div>
+                        </div>
+                    </div>
+        
+                    <!-- Support -->
+                    <div class="flex flex-col gap-1 mb-4">
+                        <div class="text-sm text-slate-700 font-semibold">Support</div>
+                        <div class="flex items-start gap-1">
+                            <ng-icon name="mat-check" class="mt-0.5"></ng-icon>
+                            <div class="text-sm text-slate-700">Email support</div>
+                        </div>
+                        <div class="flex items-start gap-1">
+                            <ng-icon name="mat-check" class="mt-0.5"></ng-icon>
+                            <div class="text-sm text-slate-700">Phone support</div>
+                        </div>
+                    </div>
+        
+                    <!-- Add-ons -->
+                    <div class="flex flex-col gap-1">
+                        <div class="text-sm text-slate-700 font-semibold">Add-ons</div>
+                        <div class="flex items-start gap-1">
+                            <ng-icon name="mat-check" class="mt-0.5"></ng-icon>
+                            <div class="text-sm text-slate-700">Document Locker</div>
+                        </div>
+                    </div>
+                </div>
+        
+                <!-- Consultant Professional -->
+                <div class="pricing-card">
+                    <div class="text-sm text-slate-500">Consultant</div>
+                    <div class="text-3xl font-semibold text-slate-700 mb-2">Professional</div>
+                    <div class="text-sm text-slate-500 mb-4">Unfiltered, unlimited access to all E-rate data nationally plus
+                        additional add-ons</div>
+                    <div class="flex items-end">
+                        <div class="text-4xl font-semibold text-slate-700">$300</div>
+                        <div class="text-xl font-semibold text-slate-700">/mo</div>
+                    </div>
+                    <div class="pt-6 pb-10">
+                        <a href="#" class="btn-primary btn-large !w-full">Start your trial</a>
+                    </div>
+        
+                    <!-- Features -->
+                    <div class="flex flex-col gap-1 mb-4">
+                        <div class="text-sm text-slate-700 font-semibold">Features</div>
+                        <div class="flex items-start gap-1">
+                            <ng-icon name="mat-check" class="mt-0.5"></ng-icon>
+                            <div class="text-sm text-slate-700">View your school's child entities</div>
+                        </div>
+                        <div class="flex items-start gap-1">
+                            <ng-icon name="mat-check" class="mt-0.5"></ng-icon>
+                            <div class="text-sm text-slate-700">View your Form 470s for all funding years</div>
+                        </div>
+                        <div class="flex items-start gap-1">
+                            <ng-icon name="mat-check" class="mt-0.5"></ng-icon>
+                            <div class="text-sm text-slate-700">View your Form 471s for all funding years</div>
+                        </div>
+                        <div class="flex items-start gap-1">
+                            <ng-icon name="mat-check" class="mt-0.5"></ng-icon>
+                            <div class="text-sm text-slate-700">View your E-rate disbursements for all funding years
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-1">
+                            <ng-icon name="mat-check" class="mt-0.5"></ng-icon>
+                            <div class="text-sm text-slate-700">Full suite of notifications
+                            </div>
+                        </div>
+                    </div>
+        
+                    <!-- Seats -->
+                    <div class="flex flex-col gap-1 mb-4">
+                        <div class="text-sm text-slate-700 font-semibold">Seats</div>
+                        <div class="flex items-start gap-1">
+                            <ng-icon name="mat-check" class="mt-0.5"></ng-icon>
+                            <div class="text-sm text-slate-700">Unlimited seats within your domain</div>
+                        </div>
+                    </div>
+        
+                    <!-- Support -->
+                    <div class="flex flex-col gap-1 mb-4">
+                        <div class="text-sm text-slate-700 font-semibold">Support</div>
+                        <div class="flex items-start gap-1">
+                            <ng-icon name="mat-check" class="mt-0.5"></ng-icon>
+                            <div class="text-sm text-slate-700">Email support</div>
+                        </div>
+                        <div class="flex items-start gap-1">
+                            <ng-icon name="mat-check" class="mt-0.5"></ng-icon>
+                            <div class="text-sm text-slate-700">Phone support</div>
+                        </div>
+                    </div>
+        
+                    <!-- Add-ons -->
+                    <div class="flex flex-col gap-1">
+                        <div class="text-sm text-slate-700 font-semibold">Add-ons</div>
+                        <div class="flex items-start gap-1">
+                            <ng-icon name="mat-check" class="mt-0.5"></ng-icon>
+                            <div class="text-sm text-slate-700">Document Locker</div>
+                        </div>
+                        <div class="flex items-start gap-1">
+                            <ng-icon name="mat-check" class="mt-0.5"></ng-icon>
+                            <div class="text-sm text-slate-700">Mapping and Target Automation</div>
+                        </div>
+                        <div class="flex items-start gap-1">
+                            <ng-icon name="mat-check" class="mt-0.5"></ng-icon>
+                            <div class="text-sm text-slate-700">Geolocation Insights</div>
+                        </div>
+                    </div>
+                </div>
+        
+        
+            </div>
+        </section>
+    </ng-container>
+
+    <!-- Service Provider Pricing -->
+    <ng-container *ngSwitchCase="'service-provider'">
+        <section class="sm:m-8 xl:m-10 sm:rounded-3xl mb-4 md:mb-12">
+            <div class="max-w-screen-xl mx-auto px-4 md:px-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 ">
+        
+        
+                <!-- Service Provider Basic -->
+                <div class="pricing-card">
+                    <div class="text-sm text-slate-500">Service Provider</div>
+                    <div class="text-3xl font-semibold text-slate-700 mb-2">Basic</div>
+                    <div class="text-sm text-slate-500 mb-4">Unfiltered, unlimited access to all E-rate data nationally</div>
+                    <div class="flex items-end">
+                        <div class="text-4xl font-semibold text-slate-700">$100</div>
+                        <div class="text-xl font-semibold text-slate-700">/mo</div>
+                    </div>
+                    <div class="pt-6 pb-10">
+                        <a href="#" class="btn-primary btn-large !w-full">Start your trial</a>
+                    </div>
+        
+                    <!-- Features -->
+                    <div class="flex flex-col gap-1 mb-4">
+                        <div class="text-sm text-slate-700 font-semibold">Features</div>
+                        <div class="flex items-start gap-1">
+                            <ng-icon name="mat-check" class="mt-0.5"></ng-icon>
+                            <div class="text-sm text-slate-700">View your school's child entities</div>
+                        </div>
+                        <div class="flex items-start gap-1">
+                            <ng-icon name="mat-check" class="mt-0.5"></ng-icon>
+                            <div class="text-sm text-slate-700">View your Form 470s for all funding years</div>
+                        </div>
+                        <div class="flex items-start gap-1">
+                            <ng-icon name="mat-check" class="mt-0.5"></ng-icon>
+                            <div class="text-sm text-slate-700">View your Form 471s for all funding years</div>
+                        </div>
+                        <div class="flex items-start gap-1">
+                            <ng-icon name="mat-check" class="mt-0.5"></ng-icon>
+                            <div class="text-sm text-slate-700">View your E-rate disbursements for all funding years
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-1">
+                            <ng-icon name="mat-check" class="mt-0.5"></ng-icon>
+                            <div class="text-sm text-slate-700">Full suite of notifications
+                            </div>
+                        </div>
+                    </div>
+        
+                    <!-- Seats -->
+                    <div class="flex flex-col gap-1 mb-4">
+                        <div class="text-sm text-slate-700 font-semibold">Seats</div>
+                        <div class="flex items-start gap-1">
+                            <ng-icon name="mat-check" class="mt-0.5"></ng-icon>
+                            <div class="text-sm text-slate-700">Unlimited seats within your domain</div>
+                        </div>
+                    </div>
+        
+                    <!-- Support -->
+                    <div class="flex flex-col gap-1">
+                        <div class="text-sm text-slate-700 font-semibold">Support</div>
+                        <div class="flex items-start gap-1">
+                            <ng-icon name="mat-check" class="mt-0.5"></ng-icon>
+                            <div class="text-sm text-slate-700">Email support</div>
+                        </div>
+                        <div class="flex items-start gap-1">
+                            <ng-icon name="mat-check" class="mt-0.5"></ng-icon>
+                            <div class="text-sm text-slate-700">Phone support</div>
+                        </div>
+                    </div>
+                </div>
+        
+                <!-- Service Provider Advanced -->
+                <div class="pricing-card">
+                    <div class="text-sm text-slate-500">Service Provider</div>
+                    <div class="text-3xl font-semibold text-slate-700 mb-2">Advanced</div>
+                    <div class="text-sm text-slate-500 mb-4">Unfiltered, unlimited access to all E-rate data nationally plus
+                        additional add-ons</div>
+                    <div class="flex items-end">
+                        <div class="text-4xl font-semibold text-slate-700">$200</div>
+                        <div class="text-xl font-semibold text-slate-700">/mo</div>
+                    </div>
+                    <div class="pt-6 pb-10">
+                        <a href="#" class="btn-primary btn-large !w-full">Start your trial</a>
+                    </div>
+        
+                    <!-- Features -->
+                    <div class="flex flex-col gap-1 mb-4">
+                        <div class="text-sm text-slate-700 font-semibold">Features</div>
+                        <div class="flex items-start gap-1">
+                            <ng-icon name="mat-check" class="mt-0.5"></ng-icon>
+                            <div class="text-sm text-slate-700">View your school's child entities</div>
+                        </div>
+                        <div class="flex items-start gap-1">
+                            <ng-icon name="mat-check" class="mt-0.5"></ng-icon>
+                            <div class="text-sm text-slate-700">View your Form 470s for all funding years</div>
+                        </div>
+                        <div class="flex items-start gap-1">
+                            <ng-icon name="mat-check" class="mt-0.5"></ng-icon>
+                            <div class="text-sm text-slate-700">View your Form 471s for all funding years</div>
+                        </div>
+                        <div class="flex items-start gap-1">
+                            <ng-icon name="mat-check" class="mt-0.5"></ng-icon>
+                            <div class="text-sm text-slate-700">View your E-rate disbursements for all funding years
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-1">
+                            <ng-icon name="mat-check" class="mt-0.5"></ng-icon>
+                            <div class="text-sm text-slate-700">Full suite of notifications
+                            </div>
+                        </div>
+                    </div>
+        
+                    <!-- Seats -->
+                    <div class="flex flex-col gap-1 mb-4">
+                        <div class="text-sm text-slate-700 font-semibold">Seats</div>
+                        <div class="flex items-start gap-1">
+                            <ng-icon name="mat-check" class="mt-0.5"></ng-icon>
+                            <div class="text-sm text-slate-700">Unlimited seats within your domain</div>
+                        </div>
+                    </div>
+        
+                    <!-- Support -->
+                    <div class="flex flex-col gap-1 mb-4">
+                        <div class="text-sm text-slate-700 font-semibold">Support</div>
+                        <div class="flex items-start gap-1">
+                            <ng-icon name="mat-check" class="mt-0.5"></ng-icon>
+                            <div class="text-sm text-slate-700">Email support</div>
+                        </div>
+                        <div class="flex items-start gap-1">
+                            <ng-icon name="mat-check" class="mt-0.5"></ng-icon>
+                            <div class="text-sm text-slate-700">Phone support</div>
+                        </div>
+                    </div>
+        
+                    <!-- Add-ons -->
+                    <div class="flex flex-col gap-1">
+                        <div class="text-sm text-slate-700 font-semibold">Add-ons</div>
+                        <div class="flex items-start gap-1">
+                            <ng-icon name="mat-check" class="mt-0.5"></ng-icon>
+                            <div class="text-sm text-slate-700">Document Locker</div>
+                        </div>
+                    </div>
+                </div>
+        
+                <!-- Service Provider Professional -->
+                <div class="pricing-card">
+                    <div class="text-sm text-slate-500">Service Provider</div>
+                    <div class="text-3xl font-semibold text-slate-700 mb-2">Professional</div>
+                    <div class="text-sm text-slate-500 mb-4">Unfiltered, unlimited access to all E-rate data nationally plus
+                        additional add-ons</div>
+                    <div class="flex items-end">
+                        <div class="text-4xl font-semibold text-slate-700">$300</div>
+                        <div class="text-xl font-semibold text-slate-700">/mo</div>
+                    </div>
+                    <div class="pt-6 pb-10">
+                        <a href="#" class="btn-primary btn-large !w-full">Start your trial</a>
+                    </div>
+        
+                    <!-- Features -->
+                    <div class="flex flex-col gap-1 mb-4">
+                        <div class="text-sm text-slate-700 font-semibold">Features</div>
+                        <div class="flex items-start gap-1">
+                            <ng-icon name="mat-check" class="mt-0.5"></ng-icon>
+                            <div class="text-sm text-slate-700">View your school's child entities</div>
+                        </div>
+                        <div class="flex items-start gap-1">
+                            <ng-icon name="mat-check" class="mt-0.5"></ng-icon>
+                            <div class="text-sm text-slate-700">View your Form 470s for all funding years</div>
+                        </div>
+                        <div class="flex items-start gap-1">
+                            <ng-icon name="mat-check" class="mt-0.5"></ng-icon>
+                            <div class="text-sm text-slate-700">View your Form 471s for all funding years</div>
+                        </div>
+                        <div class="flex items-start gap-1">
+                            <ng-icon name="mat-check" class="mt-0.5"></ng-icon>
+                            <div class="text-sm text-slate-700">View your E-rate disbursements for all funding years
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-1">
+                            <ng-icon name="mat-check" class="mt-0.5"></ng-icon>
+                            <div class="text-sm text-slate-700">Full suite of notifications
+                            </div>
+                        </div>
+                    </div>
+        
+                    <!-- Seats -->
+                    <div class="flex flex-col gap-1 mb-4">
+                        <div class="text-sm text-slate-700 font-semibold">Seats</div>
+                        <div class="flex items-start gap-1">
+                            <ng-icon name="mat-check" class="mt-0.5"></ng-icon>
+                            <div class="text-sm text-slate-700">Unlimited seats within your domain</div>
+                        </div>
+                    </div>
+        
+                    <!-- Support -->
+                    <div class="flex flex-col gap-1 mb-4">
+                        <div class="text-sm text-slate-700 font-semibold">Support</div>
+                        <div class="flex items-start gap-1">
+                            <ng-icon name="mat-check" class="mt-0.5"></ng-icon>
+                            <div class="text-sm text-slate-700">Email support</div>
+                        </div>
+                        <div class="flex items-start gap-1">
+                            <ng-icon name="mat-check" class="mt-0.5"></ng-icon>
+                            <div class="text-sm text-slate-700">Phone support</div>
+                        </div>
+                    </div>
+        
+                    <!-- Add-ons -->
+                    <div class="flex flex-col gap-1">
+                        <div class="text-sm text-slate-700 font-semibold">Add-ons</div>
+                        <div class="flex items-start gap-1">
+                            <ng-icon name="mat-check" class="mt-0.5"></ng-icon>
+                            <div class="text-sm text-slate-700">Document Locker</div>
+                        </div>
+                        <div class="flex items-start gap-1">
+                            <ng-icon name="mat-check" class="mt-0.5"></ng-icon>
+                            <div class="text-sm text-slate-700">Mapping and Target Automation</div>
+                        </div>
+                        <div class="flex items-start gap-1">
+                            <ng-icon name="mat-check" class="mt-0.5"></ng-icon>
+                            <div class="text-sm text-slate-700">Geolocation Insights</div>
+                        </div>
+                    </div>
+                </div>
+        
+        
+            </div>
+        </section>
+    </ng-container>
+
+</ng-container>

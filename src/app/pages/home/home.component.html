@@ -1,14 +1,13 @@
 <!-- Hero Section -->
-<section class="h-auto sm:h-screen pt-12 sm:pt-0 -mt-12 lg:-mt-20 mb-6">
+<section class="h-auto sm:pt-0 -pt-12 lg:-pt-20 mb-6 flex flex-col bg-gray-50" [style.minHeight]="'calc(100vh - ' + header.height() + 'px)'">
 
-    <div class="bg-gray-50 h-full flex items-center">
-        <div class="max-w-6xl mx-auto pt-16 pb-24 w-full">
-            <div class="px-8 pb-24 lg:px-4 xl:px-0">
+    <div class="min-h-full flex items-center grow flex-col z-10">
+        <div class="max-w-6xl mx-auto pt-16 pb-24 w-full grow flex flex-col">
+            <div class="px-8 md:px-16 xl:px-0 grow flex flex-col justify-center" [style.paddingBottom.px]="header.height()">
 
                 <div class="mb-8 hidden sm:block">
-                    <a target="_blank"
-                        class="roudned-full inline-flex space-x-4 rounded-full border border-blue-100 bg-gradient-to-br from-blue-50 to-indigo-100 p-1 pr-2"
-                        href="#">
+                    <a class="roudned-full inline-flex space-x-4 rounded-full border border-blue-100 bg-gradient-to-br from-blue-50 to-indigo-100 p-1 pr-2"
+                        routerLink="platforms/rural-health-care">
                         <span
                             class="rounded-full bg-blue-500 px-2.5 py-1 text-xs font-semibold uppercase tracking-wide text-white">
                             <span>New Release</span>
@@ -60,7 +59,7 @@
             <div class="text-sm text-gray-500">schools monitored</div>
         </div>
         <div class="rounded-lg md:rounded-3xl bg-gray-100 p-4 md:p-8">
-            <ng-icon name="mat-backpack-outline" size="60px" class="text-gray-700"></ng-icon>
+           <ng-icon name="mat-backpack-outline" size="60px" class="text-gray-700"></ng-icon>
             <!--<bh-icon svgIcon="tray" style="height:60px;width:60px;font-size:60px" class="text-gray-700"></bh-icon>-->
             <div class="text-2xl text-gray-700 font-medium">4 TB+</div>
             <div class="text-sm text-gray-500">of USAC-suggested compliant documents retained</div>
@@ -168,3 +167,48 @@
         </div>
     </div>
 </section>
+
+<!-- Frequently Asked Questions -->
+<section class="sm:m-8 xl:m-10 mb-12 md:mb-0">
+    <div class="max-w-4xl mx-auto px-4 py-12 md:py-24 md:px-8">
+
+        <div class="text-center text-4xl text-slate-700 font-semibold mb-8 md:mb-16">Frequenty asked questions</div>
+
+        <div class="rounded-lg sm:rounded-3xl bg-gray-100 p-6 md:p-12">
+            
+            <app-expandable title="Can I trial BroadbandHub before paying?">
+                Yes, we want you to try Suggestr on your store for 30 days, free of charge, before committing. The analytics dashboard
+                embedded within your Shopify Admin will tell you exactly how much addition upsells and cross-sells revenue Suggestr has
+                generated for your brand.
+            </app-expandable>
+            <app-expandable title="Can I trial BroadbandHub before paying?">
+                Yes, we want you to try Suggestr on your store for 30 days, free of charge, before committing. The analytics
+                dashboard
+                embedded within your Shopify Admin will tell you exactly how much addition upsells and cross-sells revenue Suggestr
+                has
+                generated for your brand.
+            </app-expandable>
+            <app-expandable title="Can I trial BroadbandHub before paying?">
+                Yes, we want you to try Suggestr on your store for 30 days, free of charge, before committing. The analytics
+                dashboard
+                embedded within your Shopify Admin will tell you exactly how much addition upsells and cross-sells revenue Suggestr
+                has
+                generated for your brand.
+            </app-expandable>
+            <app-expandable title="Can I trial BroadbandHub before paying?">
+                Yes, we want you to try Suggestr on your store for 30 days, free of charge, before committing. The analytics
+                dashboard
+                embedded within your Shopify Admin will tell you exactly how much addition upsells and cross-sells revenue Suggestr
+                has
+                generated for your brand.
+            </app-expandable>
+
+        </div>
+    </div>
+</section>
+
+<!-- Call to action -->
+<app-call-to-action></app-call-to-action>
+
+<!-- Footer -->
+<app-footer></app-footer>

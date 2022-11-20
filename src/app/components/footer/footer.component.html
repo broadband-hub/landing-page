@@ -1,0 +1,79 @@
+<div class="inline-block w-full">
+    <footer class="sm:m-8 xl:m-10 bg-gray-800 sm:rounded-3xl py-10">
+        <div class="max-w-screen-xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-10 p-6 md:p-0 my-0 md:my-10">
+                <a [routerLink]="['/']" class="m-auto md:m-0">
+                    <img class="w-48 pointer-events-none" src="/assets/logo/logo-landscape-dark-theme.svg">
+                </a>
+                <ul class="landing-footer-list">
+                    <li class="landing-footer-list--header">Platforms</li>
+                    <li>
+                        <a [routerLink]="['/erate']">E-rate</a>
+                    </li>
+                    <li>
+                        <a [routerLink]="['/rural-health-care']">Rural Health Care</a>
+                    </li>
+                    <li>
+                        <a [routerLink]="['/document-locker']">Document Locker</a>
+                    </li>
+                    <li>
+                        <a [routerLink]="['/mapping']">Mapping and Target Automation</a>
+                    </li>
+                    <li>
+                        <a [routerLink]="['/geolocation-insights']">Geolocation Insights</a>
+                    </li>
+                </ul>
+                <ul class="landing-footer-list">
+                    <li class="landing-footer-list--header">Resources</li>
+                    <li>
+                        <a href="https://help.broadbandhub.us">Help Pages</a>
+                    </li>
+                    <li>
+                        <a href="https://blog.broadbandhub.us">Blog</a>
+                    </li>
+                    <li>Video Tutorials (coming soon)</li>
+                </ul>
+                <ul class="landing-footer-list">
+                    <li class="landing-footer-list--header">Company</li>
+                    <!--<li>About</li>
+                    <li>Contracted Sales</li>
+                    <li>Partnerships</li>-->
+                    <li>
+                        <a [routerLink]="['/contact']">Contact</a>
+                    </li>
+                    <li>
+                        <a href="https://broadbandhub.us/terms" target="_blank">Terms of service</a>
+                    </li>
+                    <li>
+                        <a href="https://broadbandhub.us/privacy" target="_blank">Privacy policy</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="w-full border-t-2 border-gray-700"></div>
+            <div class="flex flex-col-reverse md:flex-row items-center gap-4 md:gap-8 mb-4 mt-10 md:mb-10 text-base">
+                <div class="text-gray-500">
+                    <app-copyright></app-copyright>
+                </div>
+                <div class="grow"></div>
+                <div class="flex items-center gap-8">
+                    <a href="https://www.facebook.com/broadbandhub" target="_blank"
+                        class="rounded-full text-slate-200 bg-slate-700 hover:bg-slate-600 w-10 h-10 flex justify-center items-center">
+                        <ng-icon name="ion-logo-facebook" size="20px"></ng-icon>
+                    </a>
+                    <a href="https://www.instagram.com/broadbandhub/" target="_blank"
+                        class="rounded-full text-slate-200 bg-slate-700 hover:bg-slate-600 w-10 h-10 flex justify-center items-center">
+                        <ng-icon name="ion-logo-instagram" size="20px"></ng-icon>
+                    </a>
+                    <a href="https://twitter.com/BroadbandH" target="_blank"
+                        class="rounded-full text-slate-200 bg-slate-700 hover:bg-slate-600 w-10 h-10 flex justify-center items-center">
+                        <ng-icon name="ion-logo-twitter" size="20px"></ng-icon>
+                    </a>
+                    <a href="https://www.linkedin.com/company/broadbandhub/" target="_blank"
+                        class="rounded-full text-slate-200 bg-slate-700 hover:bg-slate-600 w-10 h-10 flex justify-center items-center">
+                        <ng-icon name="ion-logo-linkedin" size="20px"></ng-icon>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</div>

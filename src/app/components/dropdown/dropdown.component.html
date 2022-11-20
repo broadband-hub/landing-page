@@ -1,0 +1,9 @@
+<div class="absolute z-50 top-full pt-3 transition-all left-1/2 -translate-x-1/2" [ngClass]="visible ? 'visible translate-y-0 opacity-100' : 'invisible -translate-y-1 opacity-0'">
+
+    <div class="app-dropdown-arrow"></div>
+    <div class="app-dropdown-arrow-cover"></div>
+    
+    <div class="app-dropdown-shadow p-4 rounded-xl bg-white">
+        <ng-content></ng-content>
+    </div>
+</div>

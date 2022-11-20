@@ -1,15 +1,19 @@
-import { Component, OnInit } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
+import { HeaderService } from 'src/app/services/header/header.service';
 
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss']
 })
-export class HeaderComponent implements OnInit {
+export class HeaderComponent implements AfterViewInit {
 
-  constructor() { }
+  @ViewChild('header') private header_ref!: ElementRef<HTMLDivElement>;
 
-  ngOnInit(): void {
+  constructor(private header: HeaderService) { }
+
+  ngAfterViewInit(): void {
+      this.header.setHeader(this.header_ref);
   }
 
 }
