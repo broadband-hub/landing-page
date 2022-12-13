@@ -13,7 +13,7 @@ export class HeaderComponent implements AfterViewInit {
   constructor(private header: HeaderService) { }
 
   ngAfterViewInit(): void {
-      this.header.setHeader(this.header_ref);
+    this.header.setHeader(this.header_ref);
   }
 
 }
